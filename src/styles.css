@@ -1,1 +1,104 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --backGroundColor: #233752;
+  --grey: #3B3B3B;
+  --white: #FFFFFF;
+  --black: #1F1E1E;
+  --lightGrey: #E1E1E1;
+  --red: #da4545;
+  --darkRed: #af1f1f;
+  --yellow: #b08312;
+  --blue: #1073BA;
+  --darkBlue: #0c5a91;
+
+  --separation: 5rem;
+
+  --mainTextFont: 'Mukta', sans-serif;
+  --secondaryTextFont: 'Wix Madefor Display', sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--mainTextFont);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background-color: var(--backGroundColor);
+  color: var(--white);
+}
+
+/* Globals */
+.container {
+  max-width: 170rem;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 900;
+  font-family: var(--secondaryTextFont);
+  margin: calc(var(--separation) / 2) 0;
+}
+
+h1 {
+  font-size: 4.4rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Buttons */
+
+.btn {
+  border: none;
+  border-radius: .8rem;
+  padding: 1.2rem;
+  color: var(--white);
+  font-size: 1.8rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: var(--white);
+  background-color: var(--blue);
+  transition: background-color .3s;
+}
+
+.btn-primary:hover {
+  color: var(--white);
+  background-color: var(--darkBlue);
+}
+
+.btn-danger {
+  color: var(--white);
+  background-color: var(--red);
+  transition: background-color .3s;
+}
+.btn-danger:hover {
+  color: var(--white);
+  background-color: var(--darkRed);
+}
