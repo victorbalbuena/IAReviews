@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="title">
+    <h1>IA Reviews</h1>
+  </div>
+  <div class="info">
+    <p>Create a review of a place with IA, start typing to start!.</p>
+  </div>
+  <div class="logic-container">
+    <input type="text"
+           name="name"
+           placeholder="Place name*"
+           autocomplete="off"
+           spellcheck="false">
+    <textarea name="comments"
+              placeholder="Comments*"
+              rows="3"
+              autocomplete="off"
+              spellcheck="false"></textarea>
+    <input type="text"
+           name="yourName"
+           placeholder="Your name (optional)"
+           autocomplete="off"
+           spellcheck="false">
+    <button class="btn btn-outline-primary">Generate</button>
+    <div class="canvas">
+      <app-canva></app-canva>
+    </div>
+    <div class="buttons">
+      <button class="btn btn-outline-primary">Copy Text</button>
+      <button class="btn btn-outline-primary">Save as Image</button>
+    </div>
+  </div>
+</div>
