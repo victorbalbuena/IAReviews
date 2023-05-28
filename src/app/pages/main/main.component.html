@@ -22,12 +22,12 @@
            autocomplete="off"
            spellcheck="false">
     <button class="btn btn-outline-primary">Generate</button>
-    <div class="canvas">
+    <div class="canvas" #canvas>
       <app-canva></app-canva>
     </div>
     <div class="buttons">
       <button class="btn btn-outline-primary">Copy Text</button>
-      <button class="btn btn-outline-primary">Save as Image</button>
+      <button class="btn btn-outline-primary" (click)="captureReview()">Save as Image</button>
     </div>
   </div>
 </div>

@@ -46,11 +46,6 @@
   color: var(--white);
 }
 
-.logic-container input:focus,
-.logic-container textarea:focus{
-  border: 3px solid var(--yellow);
-}
-
 .logic-container input::placeholder,
 .logic-container textarea::placeholder{
   color: var(--white);
