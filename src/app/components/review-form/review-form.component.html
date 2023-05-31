@@ -1,0 +1,18 @@
+<ng-container [formGroup]="reviewForm">
+  <div class="form-container">
+    <input type="text"
+           name="name"
+           placeholder="Place name*"
+           autocomplete="off"
+           spellcheck="false"
+           formControlName="name"
+    >
+    <textarea name="comments"
+              placeholder="Comments*"
+              rows="3"
+              autocomplete="off"
+              spellcheck="false"
+              formControlName="comments"
+    ></textarea>
+  </div>
+</ng-container>

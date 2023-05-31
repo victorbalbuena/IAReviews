@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-canva',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./canva.component.css']
 })
 export class CanvaComponent implements OnInit {
+
+  @Input()
+  finalReview?: string;
 
   constructor() { }
 
