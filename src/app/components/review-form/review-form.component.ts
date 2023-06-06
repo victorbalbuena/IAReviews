@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {FormGroup} from "@angular/forms";
+import {AbstractControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-review-form',
@@ -14,6 +14,14 @@ export class ReviewFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  get name () {
+    return this.reviewForm?.get('name');
+  }
+
+  get comments () {
+    return this.reviewForm?.get('comments');
   }
 
 }

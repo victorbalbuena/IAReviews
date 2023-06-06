@@ -2,17 +2,25 @@
   <div class="form-container">
     <input type="text"
            name="name"
-           placeholder="Place name*"
+           placeholder="Nombre del lugar*"
            autocomplete="off"
            spellcheck="false"
            formControlName="name"
     >
+    <div class="error" *ngIf="name?.invalid && name?.touched">
+      <i class="fas fa-exclamation-circle"></i>
+      Este campo es obligatorio
+    </div>
     <textarea name="comments"
-              placeholder="Comments*"
+              placeholder="Comentarios (sobre comida, precios, experiencia)*"
               rows="3"
               autocomplete="off"
               spellcheck="false"
               formControlName="comments"
     ></textarea>
+    <div class="error" *ngIf="comments?.invalid && comments?.touched">
+      <i class="fas fa-exclamation-circle"></i>
+      Este campo es obligatorio
+    </div>
   </div>
 </ng-container>

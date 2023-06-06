@@ -1,7 +1,7 @@
 import {Component, OnInit, Renderer2, ElementRef, ViewChild, OnDestroy} from '@angular/core';
 import html2canvas from "html2canvas";
 import {ReviewFormBuilder} from "../../../_core/_form_utils/builders/review-form-builder";
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {AbstractControl, FormBuilder, FormGroup} from "@angular/forms";
 import {Review} from "../../../_core/_models/review";
 import {SubSink} from "subsink";
 import {OpenaiService} from "../../services/openai.service";
@@ -60,24 +60,27 @@ export class MainComponent implements OnInit, OnDestroy {
   }
 
   sendReview() {
-    console.log('hello');
-    this.isResponding = true;
-    this.finalReview = '';
-    this.review.name = this.name?.value;
-    this.review.comments = this.comments?.value;
+    if (this.reviewForm.valid) {
+      this.isResponding = true;
+      this.finalReview = '';
+      this.review.name = this.name?.value;
+      this.review.comments = this.comments?.value;
 
-    this.subSink.add(
-      this.openaiHttp.getReviewResponse(this.review)
-        .subscribe((data) => {
-          // @ts-ignore
-          console.log(data.text);
-          // @ts-ignore
-          this.finalReview = data.text;
-          this.isResponding = false;
-        }, (error) => {
-          console.log(error);
-        })
-    );
+      this.subSink.add(
+        this.openaiHttp.getReviewResponse(this.review)
+          .subscribe((data) => {
+            // @ts-ignore
+            console.log(data.text);
+            // @ts-ignore
+            this.finalReview = data.text;
+            this.isResponding = false;
+          }, (error) => {
+            console.log(error);
+          })
+      );
+    } else {
+      this.reviewForm.markAllAsTouched();
+    }
   }
 
   get name() {

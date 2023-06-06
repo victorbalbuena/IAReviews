@@ -2,8 +2,10 @@
   background-color: var(--black);
   height: auto;
   min-width: inherit;
-  padding: 1.8rem;
-  border-radius: .5rem;
+  padding: 2.5rem;
+  border-radius: 1rem;
   font-size: 1.6rem;
   line-height: 133%;
+
+  text-align: justify;
 }

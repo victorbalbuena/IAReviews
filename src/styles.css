@@ -112,16 +112,13 @@ img {
   transition: background-color .3s ease-in;
 }
 
-@media (hover: hover) {
-  .btn-outline-primary:hover {
-    background-color: var(--blue);
-    border: 2px solid var(--blue);
-  }
+.btn-outline-primary:hover {
+  background-color: var(--blue);
+  border: 2px solid var(--blue);
 }
 
-@media (hover: none) {
-  .btn-outline-primary:active {
-    background-color: var(--blue);
-    transition: background-color 300ms ease;
-  }
+.btn-outline-primary:disabled {
+  background-color: var(--grey);
+  border: 2px solid var(--white);
+  cursor: inherit;
 }
