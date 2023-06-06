@@ -5,7 +5,7 @@ import { PagesRoutingModule } from "./pages/pages-routing.module";
 
 const routes: Routes = [
   { path: '', redirectTo: '/create', pathMatch: 'full' },
-  { path: '**', component: Page404Component },
+  { path: '**', redirectTo: '/create', pathMatch: 'full' },
 ];
 
 @NgModule({
