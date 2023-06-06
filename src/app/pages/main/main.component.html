@@ -8,13 +8,13 @@
   </div>
   <div class="logic-container">
     <app-review-form [reviewForm]="reviewForm"></app-review-form>
-    <button class="btn btn-outline-primary" (click)="sendReview()" [disabled]="isResponding === true">Generate</button>
+    <button class="btn btn-outline-primary" (click)="sendReview()" [disabled]="isResponding === true">Generar reseña</button>
     <div class="canvas" #canvas *ngIf="finalReview?.length">
       <app-canva [finalReview]="finalReview"></app-canva>
     </div>
     <div class="buttons" *ngIf="finalReview?.length">
 <!--      <button class="btn btn-outline-primary">Copy Text</button>-->
-      <button class="btn btn-outline-primary" (click)="captureReview()">Save as Image</button>
+      <button class="btn btn-outline-primary" (click)="captureReview()">Guardar como imagen</button>
     </div>
   </div>
 

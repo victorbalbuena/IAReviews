@@ -70,8 +70,6 @@ export class MainComponent implements OnInit, OnDestroy {
         this.openaiHttp.getReviewResponse(this.review)
           .subscribe((data) => {
             // @ts-ignore
-            console.log(data.text);
-            // @ts-ignore
             this.finalReview = data.text;
             this.isResponding = false;
           }, (error) => {
