@@ -16,6 +16,10 @@
   color: var(--white);
 }
 
+textarea {
+  resize: none;
+}
+
 .error {
   font-family: var(--secondaryTextFont);
   color: #e3b735;

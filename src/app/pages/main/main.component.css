@@ -40,7 +40,7 @@
   margin: 0 auto;
   border-radius: .8rem;
   padding: 1rem;
-  border: .2rem solid var(--white);
+  border: .3rem solid rgba(255, 255, 255, .7);
 }
 
 .logic-container input,
@@ -67,7 +67,7 @@
 
 @media (min-width: 768px) {
   .logic-container {
-    max-width: 50%;
+    max-width: 80%;
   }
   .logic-container input,
   .logic-container textarea {
@@ -75,6 +75,12 @@
   }
   .btn {
     width: 90%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logic-container {
+    max-width: 50%;
   }
 }
 
@@ -95,7 +101,8 @@
 }
 
 .canvas {
-  background-color: var(--secondBackground);
+  background: rgb(108,105,168);
+  background: linear-gradient(196deg, rgba(108,105,168,1) 38%, rgba(79,134,148,1) 78%, rgba(37,123,140,1) 100%);
   margin: .6rem auto;
   width: 100%;
   padding: 3rem 2rem;

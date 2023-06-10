@@ -3,7 +3,6 @@
     <h1>AI Reviews</h1>
   </div>
   <div class="info">
-<!--    <p>Create a review of a place with AI, start typing to start!.</p>-->
     <p>¡Crea en segundos reseñas de restaurantes con Inteligencia Artificial!</p>
   </div>
   <div class="logic-container">
@@ -13,7 +12,6 @@
       <app-canva [finalReview]="finalReview"></app-canva>
     </div>
     <div class="buttons" *ngIf="finalReview?.length">
-<!--      <button class="btn btn-outline-primary">Copy Text</button>-->
       <button class="btn btn-outline-primary" (click)="captureReview()">Guardar como imagen</button>
     </div>
   </div>
